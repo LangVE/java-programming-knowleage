@@ -18,7 +18,7 @@ public class FizzBuzz {
             result = result + "Buzz";
         }
 
-        System.out.println(result);
+        //System.out.println(result);
         return result;
     }
 
@@ -28,7 +28,7 @@ public class FizzBuzz {
         result = result + toWord(targetValue, 3, "Fizz");
         result = result + toWord(targetValue, 5, "Buzz");
 
-        System.out.println(result);
+        //System.out.println(result);
         return result;
     }
 
@@ -42,12 +42,12 @@ public class FizzBuzz {
         return result;
     }
 
-    public void excute(int count) {
+    public void print(int count) {
 
         for(int i = 1; i <= count; i++)
         {
-            System.out.print(String.format("i(%s) : ", i));
-            this.check(i);
+            //System.out.print(String.format("i(%s) : %s", i, this.check(i)));
+            System.out.println(String.format("i(%s) : %s", i, this.advancedCheck(i)));
         }
     }
 }

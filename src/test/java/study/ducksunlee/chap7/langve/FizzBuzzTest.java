@@ -3,8 +3,6 @@ package study.ducksunlee.chap7.langve;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by 이영호 on 2017-09-01.
  */
@@ -142,14 +140,14 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void excute()
+    public void print()
     {
         // given
         int count = 100;
 
         // when
         FizzBuzz fizzBuzz = new FizzBuzz();
-        fizzBuzz.excute(count);
+        fizzBuzz.print(count);
 
         // then
     }
