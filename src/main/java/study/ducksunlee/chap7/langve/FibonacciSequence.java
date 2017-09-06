@@ -24,4 +24,9 @@ public class FibonacciSequence {
 
         return list;
     }
+
+    public static Integer fibN(int index) {
+        List<Integer> list = fibonacci(index + 1);
+        return list.get(index);
+    }
 }

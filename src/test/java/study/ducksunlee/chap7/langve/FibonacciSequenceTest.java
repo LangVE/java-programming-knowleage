@@ -93,4 +93,32 @@ public class FibonacciSequenceTest {
         Assert.assertEquals(Arrays.asList(0, 1, 1), FibonacciSequence.fibonacci(3));
         Assert.assertEquals(Arrays.asList(0, 1, 1, 2), FibonacciSequence.fibonacci(4));
     }
+
+    @Test
+    public void fibN() {
+        // given
+        int index0 = 0;
+        int index1 = 1;
+        int index2 = 2;
+        int index3 = 3;
+
+        // when
+        Integer actualResult0 = FibonacciSequence.fibN(index0);
+        Integer actualResult1 = FibonacciSequence.fibN(index1);
+        Integer actualResult2 = FibonacciSequence.fibN(index2);
+        Integer actualResult3 = FibonacciSequence.fibN(index3);
+
+        //then
+        Integer expectedResult0 = 0;
+        Assert.assertEquals(expectedResult0, actualResult0);
+
+        Integer expectedResult1 = 1;
+        Assert.assertEquals(expectedResult1, actualResult1);
+
+        Integer expectedResult2 = 1;
+        Assert.assertEquals(expectedResult2, actualResult2);
+
+        Integer expectedResult3 = 2;
+        Assert.assertEquals(expectedResult3, actualResult3);
+    }
 }
