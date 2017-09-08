@@ -157,4 +157,54 @@ public class FibonacciSequenceTest {
 
         // then
     }
+
+    @Test
+    public void fibRecursiveCached() {
+        // given
+        int index0 = 0;
+        int index1 = 1;
+        int index2 = 2;
+        int index3 = 3;
+
+        // when
+        int actual0 = FibonacciSequence.fibNRecursiveCached(index0);
+        int actual1 = FibonacciSequence.fibNRecursiveCached(index1);
+        int actual2 = FibonacciSequence.fibNRecursiveCached(index2);
+        int actual3 = FibonacciSequence.fibNRecursiveCached(index3);
+
+        // then
+        int expected0 = 0;
+        int expected1 = 1;
+        int expected2 = 1;
+        int expected3 = 2;
+        Assert.assertEquals(expected0, actual0);
+        Assert.assertEquals(expected1, actual1);
+        Assert.assertEquals(expected2, actual2);
+        Assert.assertEquals(expected3, actual3);
+    }
+
+    @Test
+    public void largeFib() {
+        // given
+        int index = 45;
+
+        //when
+        final long nonCachedStart = System.nanoTime();
+        int actualNoncached = FibonacciSequence.fibNRecursiveCached(index);
+        final long nonCachedEnd = System.nanoTime();
+
+        final long cachedStart = System.nanoTime();
+        int actualCached = FibonacciSequence.fibNRecursiveCached(index);
+        final long cachedEnd = System.nanoTime();
+
+        // then
+        int expected = 1134903170;
+        Assert.assertEquals(expected, actualNoncached);
+        Assert.assertEquals(expected, actualCached);
+
+        System.out.println(String.format("nonCached time : %s", (nonCachedEnd - nonCachedStart)));
+        System.out.println(String.format("cached time : %s", (cachedEnd - cachedStart)));
+    }
+
 }
+
