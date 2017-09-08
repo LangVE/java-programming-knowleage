@@ -121,4 +121,40 @@ public class FibonacciSequenceTest {
         Integer expectedResult3 = 2;
         Assert.assertEquals(expectedResult3, actualResult3);
     }
+
+    @Test
+    public void fibNRecursive() {
+        // given
+        int index0 = 0;
+        int index1 = 1;
+        int index2 = 2;
+        int index3 = 3;
+
+        // when
+        int actual0 = FibonacciSequence.fibNRecursive(index0);
+        int actual1 = FibonacciSequence.fibNRecursive(index1);
+        int actual2 = FibonacciSequence.fibNRecursive(index2);
+        int actual3 = FibonacciSequence.fibNRecursive(index3);
+
+        // then
+        int expected0 = 0;
+        int expected1 = 1;
+        int expected2 = 1;
+        int expected3 = 2;
+        Assert.assertEquals(expected0, actual0);
+        Assert.assertEquals(expected1, actual1);
+        Assert.assertEquals(expected2, actual2);
+        Assert.assertEquals(expected3, actual3);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void fibNRecursive_잘못된index값을요청했을때() {
+        // given
+        int index0 = -1;
+
+        // when
+        int actual0 = FibonacciSequence.fibNRecursive(index0);
+
+        // then
+    }
 }

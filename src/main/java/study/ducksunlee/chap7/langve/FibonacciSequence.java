@@ -29,4 +29,22 @@ public class FibonacciSequence {
         List<Integer> list = fibonacci(index + 1);
         return list.get(index);
     }
+
+    public static int fibNRecursive(int index) {
+        if (index < 0) {
+            throw new IllegalArgumentException("index의 값이 0 이상이어야 합니다. index:" + index);
+        }
+
+        int result = 0;
+
+        if (index == 0) {
+            result = 0;
+        } else if (index == 1) {
+            result = 1;
+        } else {
+            result = fibNRecursive(index - 1) + fibNRecursive(index - 2);
+        }
+
+        return result;
+    }
 }
