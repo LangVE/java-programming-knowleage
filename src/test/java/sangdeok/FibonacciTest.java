@@ -2,6 +2,7 @@ package sangdeok;
 
 import org.junit.Assert;
 import org.junit.Test;
+import study.ducksunlee.chap7.duck.Fibonacci;
 
 import java.util.ArrayList;
 import java.util.Arrays;
