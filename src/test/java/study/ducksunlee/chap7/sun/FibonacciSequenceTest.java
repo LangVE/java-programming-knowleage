@@ -93,5 +93,35 @@ public class FibonacciSequenceTest {
         Assert.assertEquals(FibonacciSequence.fibonacci(9), Arrays.asList(0, 1, 1, 2, 3, 5, 8, 13, 21));
         Assert.assertEquals(FibonacciSequence.fibonacci(10), Arrays.asList(0, 1, 1, 2, 3, 5, 8, 13, 21, 34));
     }
+    
+    @Test(expected=IllegalArgumentException.class)
+    public void fibonacci0보다작을때() {
+    	int length = -1;
+    	List<Integer> actualList = FibonacciSequence.fibonacci(length);
+    }
+    
+    @Test
+    public void fibN() {
+    	Assert.assertEquals(0, FibonacciSequence.fibN(0));
+    	Assert.assertEquals(1, FibonacciSequence.fibN(1));
+    	Assert.assertEquals(1, FibonacciSequence.fibN(2));
+    	Assert.assertEquals(34, FibonacciSequence.fibN(9));
+    	System.out.println(FibonacciSequence.fibN(7));
+    }
+    
+    @Test
+    public void bigFib() {
+    	long nonCacheStart = System.nanoTime();
+    	Assert.assertEquals(1134903170, FibonacciSequence.fibN(45));
+    	long nonCacheEnd = System.nanoTime();
+    	
+    	System.out.println("noncache: " + (nonCacheEnd - nonCacheStart));
+    	
+    	long cacheStart = System.nanoTime();
+    	Assert.assertEquals(1134903170, FibonacciSequence.cachedFibN(45));
+    	long cacheEnd = System.nanoTime();
+    	
+    	System.out.println("cache: " + (cacheEnd - cacheStart));
+    }
    
 }
