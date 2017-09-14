@@ -48,5 +48,4 @@ public class Anagrams {
 		return anagrams == null ? new ArrayList<String>() : anagrams;
 	}
 
-
 }
