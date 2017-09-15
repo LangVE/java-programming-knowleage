@@ -95,7 +95,7 @@ public class FibonacciSequenceTest {
     }
     
     @Test(expected=IllegalArgumentException.class)
-    public void fibonacci0º¸´ÙÀÛÀ»¶§() {
+    public void fibonacci0ë³´ë‹¤ì‘ì„ë•Œ() {
     	int length = -1;
     	List<Integer> actualList = FibonacciSequence.fibonacci(length);
     }
