@@ -15,5 +15,6 @@ public class ReverseTest {
         String actualVal = Reverse.reverse(word);
 
         Assert.assertEquals("ELPPA", actualVal);
+
     }
 }
