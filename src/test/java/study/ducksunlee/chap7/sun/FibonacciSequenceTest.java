@@ -95,8 +95,8 @@ public class FibonacciSequenceTest {
     }
     
     @Test(expected=IllegalArgumentException.class)
-    public void fibonacci0인경우() {
-        int length = -1;
+    public void fibonacci0보다작을때() {
+    	int length = -1;
     	List<Integer> actualList = FibonacciSequence.fibonacci(length);
     }
     
