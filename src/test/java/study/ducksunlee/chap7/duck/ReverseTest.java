@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by 이상덕 on 2017-09-18.
+ * Created by LSD on 2017-09-19.
  */
 public class ReverseTest {
 
@@ -33,6 +33,4 @@ public class ReverseTest {
         String expectedStr = "CBA";
         Assert.assertEquals(expectedStr, reverseStr);
     }
-
-
 }

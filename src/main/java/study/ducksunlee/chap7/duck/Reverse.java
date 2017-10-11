@@ -1,20 +1,18 @@
 package study.ducksunlee.chap7.duck;
 
 /**
- * Created by 이상덕 on 2017-09-18.
+ * Created by LSD on 2017-09-19.
  */
 public class Reverse {
     public static String getReverseWithFor(String str) {
-        String[] reverseStr = new String[str.length()];
+        StringBuffer sb = new StringBuffer();
         for(int i=0; i<str.length(); i++) {
-            reverseStr[i] = str.charAt(reverseStr.length-i-1);
-            //System.out.println(str.charAt(reverseStr.length-i-1));
+            sb.append(String.valueOf(str.charAt(str.length()-i-1)));
         }
-        return "";
+        return sb.toString();
     }
 
     public static String getReverseWithStringBuffer(String str) {
         return new StringBuffer(str).reverse().toString();
     }
-
 }
