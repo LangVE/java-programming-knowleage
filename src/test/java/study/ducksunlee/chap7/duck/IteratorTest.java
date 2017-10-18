@@ -66,4 +66,47 @@ public class IteratorTest {
         System.out.println(String.format("actualList : %s", actualList.toString()));
     }
 
+    @Test
+    public void iterator_vs_list_performance_test() {
+
+        long beginMillis, endMillis;
+
+        int inRoopSize = 10;
+        int maxRoopSize = 10000000;
+
+        ArrayList<Integer> list = new ArrayList<Integer>();
+
+        for (int i = 0; i < maxRoopSize; i++) {
+            list.add(i);
+        }
+
+        System.out.println("--------< Iterator while >--------");
+
+        for (int idx = 0; idx < inRoopSize; idx++) {
+            beginMillis = System.nanoTime();
+
+            Iterator<Integer> iterator = list.iterator();
+
+            while (iterator.hasNext()) {
+                list.get(iterator.next());
+            }
+
+            endMillis = System.nanoTime();
+
+            System.out.println(((double) (endMillis - beginMillis) / 1000000000));
+        }
+
+        System.out.println("--------< ArrayLIst for >--------");
+        for (int idx = 0; idx < inRoopSize; idx++) {
+            beginMillis = System.nanoTime();
+            int size = list.size();
+            for (int i = 0; i < size; i++) {
+                list.get(i);
+            }
+            endMillis = System.nanoTime();
+
+            System.out.println(((double) (endMillis - beginMillis) / 1000000000));
+        }
+    }
+
 }
