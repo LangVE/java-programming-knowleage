@@ -109,4 +109,11 @@ public class IteratorTest {
         }
     }
 
+    @Test
+    public void param_test() {
+        int a = 1;
+        String b = null;
+        IteratorCustom.paramTest(a, b);
+    }
+
 }

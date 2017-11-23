@@ -45,4 +45,6 @@ public class IteratorCustom {
             currentIterator.remove();
         }
     }
+
+    public static void paramTest(int a, String b){}
 }
