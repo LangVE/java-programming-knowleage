@@ -11,16 +11,16 @@ import java.util.Calendar;
 public class TimeOutTest {
 
     @Test(timeout = 4000L)
-    public void timeoutTest(){
-        int num = 3 ;
+    public void timeoutTest() {
+        int num = 3;
         SimpleDateFormat fmt = new SimpleDateFormat("HH:mm:ss");
 
-        for(int i=0; i < num; i++){
-            Calendar cal = Calendar.getInstance() ;
-            System.out.println(fmt.format(cal.getTime())) ;
-            try{
+        for (int i = 0; i < num; i++) {
+            Calendar cal = Calendar.getInstance();
+            System.out.println(fmt.format(cal.getTime()));
+            try {
                 Thread.sleep(1000);
-            }catch (InterruptedException  e){
+            } catch (InterruptedException e) {
             }
         }
     }
