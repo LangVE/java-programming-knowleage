@@ -17,6 +17,13 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-maven-plugin -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.8.v20171121</version>
+            </plugin>
+
         </plugins>
     </build>
 
@@ -69,6 +76,13 @@
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
             <version>9.4.8.v20171121</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.4</version>
         </dependency>
 
     </dependencies>

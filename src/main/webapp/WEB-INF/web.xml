@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<web-app
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+        metadata-complete="false" version="3.0">
+
+    <servlet>
+        <servlet-name>Echo</servlet-name>
+        <servlet-class>study.ducksunlee.chap13.paircoding.EchoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Echo</servlet-name>
+        <url-pattern>/echo/*</url-pattern>
+    </servlet-mapping>
+</web-app>
