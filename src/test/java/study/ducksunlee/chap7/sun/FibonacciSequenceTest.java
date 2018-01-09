@@ -94,11 +94,11 @@ public class FibonacciSequenceTest {
         Assert.assertEquals(FibonacciSequence.fibonacci(10), Arrays.asList(0, 1, 1, 2, 3, 5, 8, 13, 21, 34));
     }
     
-    @Test(expected=IllegalArgumentException.class)
-    public void fibonacci0보다작을때() {
-    	int length = -1;
-    	List<Integer> actualList = FibonacciSequence.fibonacci(length);
-    }
+//    @Test(expected=IllegalArgumentException.class)
+//    public void fibonacci0??????????() {
+//    	int length = -1;
+//    	List<Integer> actualList = FibonacciSequence.fibonacci(length);
+//    }
     
     @Test
     public void fibN() {
